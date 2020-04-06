@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttersrcintro/resource/colors/colors.dart';
 import 'package:fluttersrcintro/screen/first_page.dart';
 import 'package:fluttersrcintro/screen/second_page.dart';
+import 'package:fluttersrcintro/screen/third_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'IMFell',
         primarySwatch: Colors.deepPurple,
       ),
-      home: SecondPage(),
+      home: ThirdPage(),
     );
   }
 }

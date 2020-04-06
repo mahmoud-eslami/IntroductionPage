@@ -59,8 +59,8 @@ class _SecondPageState extends State<SecondPage> {
               ),
               Stack(
                 children: <Widget>[
-                  Image.asset('assets/images/back2.png',width: 300,),
-                  Image.asset('assets/images/h2.png',width: 300,),
+                  Image.asset('assets/images/back2.png',width: 280,),
+                  Image.asset('assets/images/h2.png',width: 280,),
                 ],
               ),
 

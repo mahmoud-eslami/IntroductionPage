@@ -52,8 +52,8 @@ class _FirstPageState extends State<FirstPage> {
               ),
               Stack(
                 children: <Widget>[
-                  Image.asset('assets/images/back1.png',width: 300,),
-                  Image.asset('assets/images/h1.png',width: 300,),
+                  Image.asset('assets/images/back1.png',width: 280,),
+                  Image.asset('assets/images/h1.png',width: 280,),
                 ],
               ),
               Text(
