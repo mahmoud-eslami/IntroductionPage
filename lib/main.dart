@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-
+        fontFamily: 'IMFell',
         primarySwatch: Colors.blue,
       ),
       home: FirstPage(),

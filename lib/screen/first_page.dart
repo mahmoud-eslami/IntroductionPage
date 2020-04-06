@@ -8,6 +8,8 @@ class FirstPage extends StatefulWidget {
 class _FirstPageState extends State<FirstPage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: Text('asdasd',style: TextStyle(fontSize: 40),),
+    );
   }
 }
