@@ -145,7 +145,7 @@ class CircleProgressBarPainter extends CustomPainter {
     @required this.foregroundColor,
     @required this.percentage,
     double strokeWidth,
-  }) : this.strokeWidth = strokeWidth ?? 6;
+  }) : this.strokeWidth = strokeWidth ?? 3;
 
   @override
   void paint(Canvas canvas, Size size) {
