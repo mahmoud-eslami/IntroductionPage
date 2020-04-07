@@ -25,48 +25,64 @@ class _ThirdPageState extends State<ThirdPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  Container(
-                    width: 35,
-                    height: 35,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.rectangle,
-                      color: AppColors.backIconBackgroundColor,
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(
-                          12,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: Container(
+                      width: 35,
+                      height: 35,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.rectangle,
+                        color: AppColors.backIconBackgroundColor,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(
+                            12,
+                          ),
+                        ),
+                      ),
+                      child: Center(
+                        child: Icon(
+                          Icons.arrow_back_ios,
+                          color: AppColors.primaryTextColor,
+                          size: 15,
                         ),
                       ),
                     ),
-                    child: Center(
-                      child: Icon(
-                        Icons.arrow_back_ios,
-                        color: AppColors.primaryTextColor,
-                        size: 15,
-                      ),
-                    ),
                   ),
-                  Text(Strings.skipBtn,
-                      style: textTheme.title.copyWith(
-                          color: AppColors.primaryTextColor, fontSize: 22)),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => FinalPage()));
+                    },
+                    child: Text(Strings.skipBtn,
+                        style: textTheme.title.copyWith(
+                            color: AppColors.primaryTextColor, fontSize: 22)),
+                  ),
                 ],
               ),
               Stack(
                 children: <Widget>[
-                  Image.asset('assets/images/back3.png',width: 280,),
-                  Image.asset('assets/images/h3.png',width: 280,),
+                  Image.asset(
+                    'assets/images/back3.png',
+                    width: 280,
+                  ),
+                  Image.asset(
+                    'assets/images/h3.png',
+                    width: 280,
+                  ),
                 ],
               ),
               Text(
                 Strings.thirdTitle,
                 textAlign: TextAlign.center,
-                style: textTheme.display1.copyWith(
-                    color: AppColors.primaryTextColor,
-                    fontSize: 30
-                ),
+                style: textTheme.display1
+                    .copyWith(color: AppColors.primaryTextColor, fontSize: 30),
               ),
               GestureDetector(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => FinalPage()));
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => FinalPage()));
                 },
                 child: Container(
                   width: 50,
@@ -84,7 +100,9 @@ class _ThirdPageState extends State<ThirdPage> {
                   ),
                 ),
               ),
-              SizedBox(height: 40,),
+              SizedBox(
+                height: 40,
+              ),
             ],
           ),
         ),

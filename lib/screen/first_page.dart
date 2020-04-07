@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttersrcintro/resource/colors/colors.dart';
 import 'package:fluttersrcintro/resource/string/strings.dart';
+import 'package:fluttersrcintro/screen/final_page.dart';
 import 'package:fluttersrcintro/screen/second_page.dart';
 
 class FirstPage extends StatefulWidget {
@@ -46,9 +47,14 @@ class _FirstPageState extends State<FirstPage> {
                       ),
                     ),
                   ),
-                  Text(Strings.skipBtn,
-                      style: textTheme.title.copyWith(
-                          color: AppColors.primaryTextColor, fontSize: 22)),
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => FinalPage()));
+                    },
+                    child: Text(Strings.skipBtn,
+                        style: textTheme.title.copyWith(
+                            color: AppColors.primaryTextColor, fontSize: 22)),
+                  ),
                 ],
               ),
               Stack(
