@@ -37,7 +37,7 @@ class _FinalPageState extends State<FinalPage> {
             color: AppColors.primaryButtonColor,
             onPressed: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => FirstPage()));
+                  MaterialPageRoute(builder: (context) => FirstPage(value: .33,)));
             },
             child: Text(
               'Back To First Page',

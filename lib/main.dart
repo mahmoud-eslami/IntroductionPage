@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'IMFell',
         primarySwatch: Colors.deepPurple,
       ),
-      home: FirstPage(),
+      home: FirstPage(value: .33,),
     );
   }
 }

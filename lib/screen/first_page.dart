@@ -4,13 +4,25 @@ import 'package:fluttersrcintro/resource/colors/colors.dart';
 import 'package:fluttersrcintro/resource/string/strings.dart';
 import 'package:fluttersrcintro/screen/final_page.dart';
 import 'package:fluttersrcintro/screen/second_page.dart';
+import 'package:fluttersrcintro/widget/circular_progresser_bar.dart';
 
 class FirstPage extends StatefulWidget {
+  final double value;
+
+  const FirstPage({Key key,@required this.value}) : super(key: key);
   @override
   _FirstPageState createState() => _FirstPageState();
 }
 
 class _FirstPageState extends State<FirstPage> {
+  double nextValue;
+
+  @override
+  void initState() {
+    nextValue = 0;
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
@@ -80,30 +92,46 @@ class _FirstPageState extends State<FirstPage> {
                 style: textTheme.display1
                     .copyWith(color: AppColors.primaryTextColor, fontSize: 30),
               ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => SecondPage(),
-                    ),
-                  );
-                },
-                child: Container(
-                  width: 50,
-                  height: 50,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: AppColors.primaryButtonColor,
-                  ),
-                  child: Center(
-                    child: Icon(
-                      Icons.arrow_forward_ios,
-                      color: Colors.white,
-                      size: 15,
+              Stack(
+                alignment: Alignment.center,
+                children: <Widget>[
+                  Container(
+                    width: 70,
+                    child: CircleProgressBar(
+                      foregroundColor: AppColors.primaryIndicatorColor,
+                      value: .33,
+                      animationDuration: Duration(milliseconds: 1000),
                     ),
                   ),
-                ),
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        nextValue = .69;
+                      });
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => SecondPage(value: nextValue,),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      width: 50,
+                      height: 50,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: AppColors.primaryButtonColor,
+                      ),
+                      child: Center(
+                        child: Icon(
+                          Icons.arrow_forward_ios,
+                          color: Colors.white,
+                          size: 15,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
               SizedBox(
                 height: 40,
