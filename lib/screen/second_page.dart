@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluttersrcintro/resource/colors/colors.dart';
 import 'package:fluttersrcintro/resource/string/strings.dart';
+import 'package:fluttersrcintro/screen/third_page.dart';
 
 class SecondPage extends StatefulWidget {
   @override
@@ -19,7 +20,7 @@ class _SecondPageState extends State<SecondPage> {
         ),
         child: SafeArea(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -64,21 +65,32 @@ class _SecondPageState extends State<SecondPage> {
                 ],
               ),
 
-              Container(
-                width: 50,
-                height: 50,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: AppColors.primaryButtonColor,
-                ),
-                child: Center(
-                  child: Icon(
-                    Icons.arrow_forward_ios,
-                    color: Colors.white,
-                    size: 15,
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ThirdPage(),
+                    ),
+                  );
+                },
+                child: Container(
+                  width: 50,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: AppColors.primaryButtonColor,
+                  ),
+                  child: Center(
+                    child: Icon(
+                      Icons.arrow_forward_ios,
+                      color: Colors.white,
+                      size: 15,
+                    ),
                   ),
                 ),
               ),
+              SizedBox(height: 40,),
             ],
           ),
         ),
