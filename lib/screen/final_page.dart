@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttersrcintro/resource/colors/colors.dart';
 import 'package:fluttersrcintro/resource/string/strings.dart';
 import 'package:fluttersrcintro/screen/first_page.dart';
+import 'package:fluttersrcintro/widget/circular_progresser_bar.dart';
 
 class FinalPage extends StatefulWidget {
   @override
@@ -42,7 +43,7 @@ class _FinalPageState extends State<FinalPage> {
               'Back To First Page',
               style: textTheme.title.copyWith(color: Colors.white),
             ),
-          )
+          ),
         ],
       ),
     );

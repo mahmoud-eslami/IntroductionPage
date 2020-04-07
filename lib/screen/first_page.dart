@@ -48,8 +48,13 @@ class _FirstPageState extends State<FirstPage> {
                     ),
                   ),
                   GestureDetector(
-                    onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => FinalPage()));
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => FinalPage(),
+                        ),
+                      );
                     },
                     child: Text(Strings.skipBtn,
                         style: textTheme.title.copyWith(
