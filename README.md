@@ -1,4 +1,4 @@
-# fluttersrcintro
+# flutterintro
 
 A new Flutter application for @fluttercm.
 
